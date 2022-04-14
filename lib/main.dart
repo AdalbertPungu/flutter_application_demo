@@ -17,22 +17,18 @@ class HomePage extends StatelessWidget {
           title: Text('Profil'),
         ),
         body: Center(
-          child: Container(
+          child: Stack(
             alignment: Alignment.center,
-            width: 300,
-            height: 400,
-            color: Colors.blue[100],
-            child: Text(
-              'Adalbert',
-              style: TextStyle(
-                fontSize: 40,
-              ),
-            ),
+            children: [
+              Container(width: 250, height: 250, color: Colors.orange),
+              Container(width: 150, height: 150, color: Colors.red),
+              Container(width: 50, height: 50, color: Colors.yellow),
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(Icons.add_a_photo),
+          child: Icon(Icons.add),
         ),
       ),
     );
