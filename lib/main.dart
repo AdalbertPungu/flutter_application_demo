@@ -25,13 +25,8 @@ class HomePage extends StatelessWidget {
                 child: Container(width: 70, height: 70, color: Colors.yellow),
               ),
               Expanded(
-                flex: 8,
-                child: Container(width: 70, height: 70, color: Colors.green),
-              ),
-              Expanded(
-                flex: 4,
-                child: Container(width: 70, height: 70, color: Colors.indigo),
-              ),
+                  child: Text(
+                      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatum sapiente earum enim obcaecati! Facere animi suscipit harum tempora incidunt repudiandae quod tenetur placeat optio maiores porro, mollitia totam culpa!'))
             ],
           ),
         ),
