@@ -16,13 +16,22 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Profil'),
         ),
-        body: Center(
-          child: Stack(
-            alignment: Alignment.center,
+        body: Container(
+          color: Colors.blue.shade50,
+          child: Row(
             children: [
-              Container(width: 250, height: 250, color: Colors.orange),
-              Container(width: 150, height: 150, color: Colors.red),
-              Container(width: 50, height: 50, color: Colors.yellow),
+              Expanded(
+                flex: 2,
+                child: Container(width: 70, height: 70, color: Colors.yellow),
+              ),
+              Expanded(
+                flex: 8,
+                child: Container(width: 70, height: 70, color: Colors.green),
+              ),
+              Expanded(
+                flex: 4,
+                child: Container(width: 70, height: 70, color: Colors.indigo),
+              ),
             ],
           ),
         ),
