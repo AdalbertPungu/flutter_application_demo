@@ -7,33 +7,52 @@ void main() {
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+  final euroList = [
+    'Allemagne',
+    'Autriche',
+    'Belgique',
+    'Bulgarie',
+    'Chypre',
+    'Croatie',
+    'Danemark',
+    'Espagne',
+    'Estonie',
+    'Finlande',
+    'France',
+    'Grèce',
+    'Hongrie',
+    'Irlande',
+    'Italie',
+    'Lettonie',
+    'Litunie',
+    'Luxembourg',
+    'Malte',
+    'Pays-Bas',
+    'Pologne',
+    'Portugal',
+    'Roumanie',
+    'Slovaque',
+    'Slovénie',
+    'Suède',
+    'Tchéquie',
+  ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Profil'),
-        ),
-        body: Container(
-          color: Colors.blue.shade50,
-          child: Row(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Container(width: 70, height: 70, color: Colors.yellow),
-              ),
-              Expanded(
-                  child: Text(
-                      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatum sapiente earum enim obcaecati! Facere animi suscipit harum tempora incidunt repudiandae quod tenetur placeat optio maiores porro, mollitia totam culpa!'))
-            ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('MyApp'),
+      ),
+      body: ListView.builder(
+        itemCount: euroList.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(euroList[index]),
+            subtitle: Text(euroList[index]),
+            leading: CircleAvatar(
+              backgroundColor: Colors.blue,
+            ),
+          );
+        },
       ),
     );
   }
