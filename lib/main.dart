@@ -7,53 +7,54 @@ void main() {
 }
 
 class HomePage extends StatelessWidget {
-  final euroList = [
-    'Allemagne',
-    'Autriche',
-    'Belgique',
-    'Bulgarie',
-    'Chypre',
-    'Croatie',
-    'Danemark',
-    'Espagne',
-    'Estonie',
-    'Finlande',
-    'France',
-    'Grèce',
-    'Hongrie',
-    'Irlande',
-    'Italie',
-    'Lettonie',
-    'Litunie',
-    'Luxembourg',
-    'Malte',
-    'Pays-Bas',
-    'Pologne',
-    'Portugal',
-    'Roumanie',
-    'Slovaque',
-    'Slovénie',
-    'Suède',
-    'Tchéquie',
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('MyApp'),
       ),
-      body: ListView.builder(
-        itemCount: euroList.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(euroList[index]),
-            subtitle: Text(euroList[index]),
-            leading: CircleAvatar(
-              backgroundColor: Colors.blue,
-            ),
-          );
-        },
-      ),
+      body: CustomCheckBox(),
+    );
+  }
+}
+
+class CustomCheckBox extends StatefulWidget {
+  const CustomCheckBox({Key? key}) : super(key: key);
+
+  @override
+  State<CustomCheckBox> createState() => _CustomCheckBoxState();
+}
+
+class _CustomCheckBoxState extends State<CustomCheckBox> {
+  var isChecked;
+  var msg;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    isChecked = false;
+    msg = 'Non activé';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Checkbox(
+            value: isChecked,
+            onChanged: (newValue) {
+              setState(() {
+                isChecked = newValue;
+                if (isChecked) {
+                  msg = 'Activé';
+                } else {
+                  msg = 'Non activé';
+                }
+              });
+            }),
+        Text(msg, style: TextStyle(fontSize: 35))
+      ],
     );
   }
 }
