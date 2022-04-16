@@ -17,33 +17,16 @@ class HomePage extends StatelessWidget {
           title: Text('MyApp'),
         ),
         body: Center(
-          child: Column(
-            children: [
-              TextButton(
-                //FlatButton
-                onPressed: () => print('clic'),
-                child: Text('Cliquez ici!'),
-              ),
-              OutlinedButton(
-                //OutlineButton
-                onPressed: () => print('clic'),
-                child: Text('Cliquez ici!'),
-              ),
-              ElevatedButton(
-                //RaisedButton
-                onPressed: () => print('clic'),
-                child: Text('Cliquez ici'),
-                style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(10),
-                  backgroundColor: MaterialStateProperty.all(Colors.teal),
-                ),
-              ),
-              GestureDetector(
-                onTap: () => print('clic détecté'),
-                child: Text('Gestion des évènement'),
-              ),
-            ],
+          child: Container(
+            color: Colors.blue.shade100,
+            width: 280,
+            height: 500,
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: //Text('OK'),
+              Icon(Icons.add, size: 50, color: Colors.yellow),
         ),
       ),
     );
