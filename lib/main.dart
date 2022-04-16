@@ -29,6 +29,15 @@ class HomePage extends StatelessWidget {
                 onPressed: () => print('clic'),
                 child: Text('Cliquez ici!'),
               ),
+              ElevatedButton(
+                //RaisedButton
+                onPressed: () => print('clic'),
+                child: Text('Cliquez ici'),
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(10),
+                  backgroundColor: MaterialStateProperty.all(Colors.teal),
+                ),
+              ),
             ],
           ),
         ),
