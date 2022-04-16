@@ -18,7 +18,13 @@ class HomePage extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            children: [],
+            children: [
+              TextButton(
+                //FlatButton
+                onPressed: () => print('clic'),
+                child: Text('Cliquez ici!'),
+              ),
+            ],
           ),
         ),
       ),
