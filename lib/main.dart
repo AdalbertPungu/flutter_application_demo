@@ -38,6 +38,10 @@ class HomePage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.teal),
                 ),
               ),
+              GestureDetector(
+                onTap: () => print('clic détecté'),
+                child: Text('Gestion des évènement'),
+              ),
             ],
           ),
         ),
