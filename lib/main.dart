@@ -24,6 +24,11 @@ class HomePage extends StatelessWidget {
                 onPressed: () => print('clic'),
                 child: Text('Cliquez ici!'),
               ),
+              OutlinedButton(
+                //OutlinedButton
+                onPressed: () => print('clic'),
+                child: Text('Cliquez ici!'),
+              ),
             ],
           ),
         ),
