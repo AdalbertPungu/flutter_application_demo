@@ -19,16 +19,10 @@ class HomePage extends StatelessWidget {
         color: Colors.blue.shade50,
         child: Row(
           children: [
+            Container(width: 70, height: 70, color: Colors.yellow),
             Expanded(
-              flex: 1,
-              child: Container(width: 70, height: 70, color: Colors.yellow),
-            ),
-            Expanded(
-                flex: 2,
-                child: Container(width: 70, height: 70, color: Colors.green)),
-            Expanded(
-              flex: 3,
-              child: Container(width: 70, height: 70, color: Colors.indigo),
+              child: Text(
+                  'Hello ça va?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ducimus pariatur sequi consequuntur! Minus, maxime! Dolorem quasi cupiditate saepe sint vero, assumenda, accusantium, doloribus id placeat amet nulla magnam ipsa!'),
             ),
           ],
         ),
