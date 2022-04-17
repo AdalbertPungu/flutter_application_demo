@@ -18,12 +18,11 @@ class HomePage extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            color: Colors.blue.shade100,
-            width: 280,
-            height: 500,
-            child: Image.network('https://picsum.photos/640',
-                fit: BoxFit.fitHeight),
-          ),
+              color: Colors.blue.shade100,
+              width: 280,
+              height: 500,
+              child: //Image.network('https://picsum.photos/640', fit: BoxFit.fitHeight),
+                  Image.asset('assets/images/img2.jpg')),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
