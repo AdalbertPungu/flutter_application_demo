@@ -19,10 +19,14 @@ class HomePage extends StatelessWidget {
         color: Colors.blue.shade50,
         child: Row(
           children: [
-            Container(width: 70, height: 70, color: Colors.yellow),
+            Expanded(
+              child: Container(width: 70, height: 70, color: Colors.yellow),
+            ),
             Expanded(
                 child: Container(width: 70, height: 70, color: Colors.green)),
-            Container(width: 70, height: 70, color: Colors.indigo),
+            Expanded(
+              child: Container(width: 70, height: 70, color: Colors.indigo),
+            ),
           ],
         ),
       ),
