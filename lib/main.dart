@@ -24,10 +24,10 @@ class HomePage extends StatelessWidget {
               child: Container(width: 70, height: 70, color: Colors.yellow),
             ),
             Expanded(
-                flex: 10,
+                flex: 2,
                 child: Container(width: 70, height: 70, color: Colors.green)),
             Expanded(
-              flex: 1,
+              flex: 3,
               child: Container(width: 70, height: 70, color: Colors.indigo),
             ),
           ],
