@@ -21,6 +21,8 @@ class HomePage extends StatelessWidget {
             color: Colors.blue.shade100,
             width: 280,
             height: 500,
+            child: Image.network('https://picsum.photos/640',
+                fit: BoxFit.fitHeight),
           ),
         ),
         floatingActionButton: FloatingActionButton(
